@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Track income, expenses, and monthly budgets" />
+    <title>Budget Tracker</title>
+    <script>
+      try {
+        var raw = localStorage.getItem('budget-tracker-data');
+        if (raw) {
+          var data = JSON.parse(raw);
+          var theme = data.settings && data.settings.theme;
+          if (theme === 'light' || theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', theme);
+          }
+          var lang = data.settings && data.settings.language;
+          if (lang) document.documentElement.setAttribute('lang', lang);
+        }
+      } catch (e) {}
+    </script>
+    <style>
+      #splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #0f1419;
+      }
+      [data-theme='light'] #splash {
+        background: #f4f6f9;
+      }
+    </style>
+  </head>
+  <body class="is-loading">
+    <div id="splash" class="splash" data-start-time="">
+      <div class="splash__content">
+        <div class="splash__logo" aria-hidden="true">
+          <img src="/logo.svg" alt="" class="splash__logo-img" width="72" height="72" decoding="async" />
+        </div>
+        <h1 class="splash__title">Budget Tracker</h1>
+        <p class="splash__tagline">Loading your finances…</p>
+        <div class="splash__loader" role="progressbar" aria-label="Loading">
+          <div class="splash__loader-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div id="app"></div>
+    <div id="settings-root"></div>
+    <script>
+      document.getElementById('splash').dataset.startTime = performance.now()
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

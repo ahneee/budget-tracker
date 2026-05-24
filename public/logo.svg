@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Budget Tracker">
+  <defs>
+    <linearGradient id="bt-bg" x1="10" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3DD6C6"/>
+      <stop offset="1" stop-color="#2A9D8F"/>
+    </linearGradient>
+    <linearGradient id="bt-shine" x1="20" y1="8" x2="44" y2="28" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bt-bg)"/>
+  <rect width="64" height="64" rx="16" fill="url(#bt-shine)"/>
+  <rect x="16" y="38" width="8" height="12" rx="2.5" fill="#0F1419" fill-opacity=".9"/>
+  <rect x="28" y="30" width="8" height="20" rx="2.5" fill="#0F1419" fill-opacity=".9"/>
+  <rect x="40" y="22" width="8" height="28" rx="2.5" fill="#0F1419" fill-opacity=".9"/>
+  <path
+    d="M14 46.5c8.5 5.5 27.5 5.5 36 0"
+    stroke="#0F1419"
+    stroke-opacity=".18"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+</svg>
