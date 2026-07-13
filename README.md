@@ -42,7 +42,7 @@ The built files are in the `dist` folder — deploy them to any static host (e.g
 
 ## License & use of this project
 
-**This project is 100% open source code. **
+**This project is 100% open source. **
 
 ---
 
