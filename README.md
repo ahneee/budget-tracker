@@ -42,11 +42,7 @@ The built files are in the `dist` folder — deploy them to any static host (e.g
 
 ## License & use of this project
 
-**This project is not open for collaboration.**
-
-The developer does **not** permit copying, redistribution, sublicensing, or distribution of this software or any part of its source code without **prior written permission**.
-
-Unauthorized use, reproduction, or distribution of this project is prohibited.
+**This project is 100% open source code. **
 
 ---
 
